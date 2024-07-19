@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>College</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <section class="header">
@@ -13,7 +20,8 @@
           <img src="img/logo.png" alt="" />
         </a>
 
-        <div class="nav__links">
+        <div class="nav__links" id="navLink">
+          <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
           <ul>
             <li><a href="">Home</a></li>
             <li><a href="">About</a></li>
@@ -22,6 +30,7 @@
             <li><a href="">Contact</a></li>
           </ul>
         </div>
+        <i class="fa-solid fa-bars" onclick="showMenu()"></i>
       </nav>
 
       <div class="text__box">
@@ -34,5 +43,17 @@
         <a href="" class="hero__btn">Visit us to Know More</a>
       </div>
     </section>
+
+    <script>
+      var navLinks = document.getElementById("navLink");
+
+      function showMenu() {
+        navLinks.style.right = "0";
+      }
+
+      function hideMenu() {
+        navLinks.style.right = "-200px";
+      }
+    </script>
   </body>
 </html>
