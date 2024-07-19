@@ -18,6 +18,7 @@
   padding: 2% 6%;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .header nav img {
@@ -99,8 +100,6 @@ nav .fa-solid {
   display: none;
 }
 
-/* COURSES */
-
 .course {
   width: 80%;
   margin: auto;
@@ -146,8 +145,6 @@ h3 {
 .row .course_col:hover {
   box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
 }
-
-/* CAMPUS */
 
 .campus {
   width: 80%;
@@ -202,8 +199,6 @@ h3 {
   opacity: 1;
 }
 
-/* FACILTIY */
-
 .facility {
   width: 80%;
   margin: auto;
@@ -232,8 +227,6 @@ h3 {
   margin-bottom: 15px;
   text-align: left;
 }
-
-/* ! TESTIMONIALS */
 
 .testimonials {
   width: 80%;
@@ -274,8 +267,6 @@ h3 {
   color: #f44336;
 }
 
-/* CALL TO ACTION */
-
 .cta {
   margin: 100px auto;
   width: 80%;
@@ -310,8 +301,6 @@ h3 {
   background: #f44336;
 }
 
-/* FOOTER */
-
 .footer {
   width: 100%;
   text-align: center;
@@ -344,29 +333,38 @@ h3 {
     display: block;
   }
 
-  .header nav .nav__links {
+  nav .nav__links {
     position: absolute;
-    background-color: #f44336;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
     height: 100vh;
     width: 200px;
     top: 0;
     right: -200px;
-    text-align: left;
-    z-index: 2;
+    text-align: right;
+    padding: 30px 0;
+    display: none;
     transition: 1s;
+    z-index: 10;
+  }
+
+  nav .nav__links.show {
+    right: 0;
+    display: block;
   }
 
   nav .fa-solid {
     display: block;
     color: #fff;
-    margin: 10px;
     font-size: 22px;
     cursor: pointer;
+    z-index: 100;
   }
 
   .header nav .nav__links ul {
     padding: 30px;
   }
+
   .row {
     flex-direction: column;
   }
